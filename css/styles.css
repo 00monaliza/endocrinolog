@@ -197,6 +197,14 @@ header.scrolled {
     object-fit: contain;
 }
 
+.logo-circle-img {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+}
+
 .logo::after {
     content: '';
     position: absolute;

@@ -36,6 +36,7 @@ const translations = {
         btnOnline: 'Онлайн прием',
         btnOffline: 'Оффлайн прием',
         bookAppointment: 'Записаться на прием',
+        doctorsOnline: 'Врач онлайн',
         
         // About
         aboutTitle: 'Обо мне',
@@ -136,6 +137,7 @@ const translations = {
         btnOnline: 'Онлайн қабылдау',
         btnOffline: 'Офлайн қабылдау',
         bookAppointment: 'Қабылдауға жазылу',
+        doctorsOnline: 'Дәрігер онлайн',
         
         // About
         aboutTitle: 'Мен туралы',
@@ -308,12 +310,29 @@ createParticles();
 
 // ==================== HEADER SCROLL ====================
 const header = document.getElementById('header');
+let lastScrollTop = 0;
+let scrollTimeout;
+
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
+    const currentScroll = window.scrollY;
+    
+    // Add/remove scrolled class for styling
+    if (currentScroll > 100) {
         header.classList.add('scrolled');
     } else {
         header.classList.remove('scrolled');
     }
+    
+    // Hide/show header based on scroll direction
+    if (currentScroll > lastScrollTop && currentScroll > 150) {
+        // Scrolling down - hide header
+        header.style.transform = 'translateX(-50%) translateY(-120%)';
+    } else {
+        // Scrolling up - show header
+        header.style.transform = 'translateX(-50%) translateY(0)';
+    }
+    
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
 // ==================== SMOOTH SCROLL ====================

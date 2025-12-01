@@ -315,7 +315,8 @@ window.addEventListener('scroll', () => {
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileNav = document.getElementById('mobileNav');
 
-mobileMenuBtn.addEventListener('click', () => {
+mobileMenuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     mobileMenuBtn.classList.toggle('active');
     mobileNav.classList.toggle('active');
 });

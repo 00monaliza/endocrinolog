@@ -1036,6 +1036,79 @@ footer {
     }
 }
 
+/* Contacts Section */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+[data-theme="dark"] .contact-card {
+    background: var(--card-bg);
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.contact-icon {
+    margin-bottom: 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-icon img {
+    transform: scale(1.1);
+}
+
+.contact-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.contact-link {
+    display: inline-block;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background: var(--secondary);
+}
+
+[data-theme="dark"] .contact-link {
+    background: var(--bg-dark);
+}
+
+.contact-link:hover {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.05);
+}
+
 /* Tablet Adjustments */
 @media (min-width: 769px) and (max-width: 1024px) {
     .hero-content h1 { font-size: 2.8rem; }
@@ -1109,6 +1182,28 @@ footer {
     
     .service-card {
         padding: 20px;
+    }
+    
+    .contact-card {
+        padding: 25px 15px;
+    }
+    
+    .contact-icon {
+        height: 50px;
+    }
+    
+    .contact-icon img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .contact-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .contact-link {
+        font-size: 0.9rem;
+        padding: 8px 15px;
     }
     
     .btn {
@@ -1586,6 +1681,24 @@ footer {
     .timeline-grid,
     .services-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .contact-card {
+        padding: 30px 20px;
+    }
+    
+    .contact-icon {
+        height: 60px;
+    }
+    
+    .contact-icon img {
+        width: 60px;
+        height: 60px;
     }
 
     .scroll-top {

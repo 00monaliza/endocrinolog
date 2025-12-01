@@ -108,6 +108,9 @@ const translations = {
         locationDistrict: 'Сарайшық район, Астана',
         buildRoute: 'Построить маршрут',
         
+        // Contacts
+        contactsTitle: 'Контакты',
+        
         // Modal
         modalTitle: 'Записаться на прием',
         selectType: 'Выберите тип приема:',
@@ -203,6 +206,9 @@ const translations = {
         locationAddress: 'Қасым Аманжолов көшесі, 24',
         locationDistrict: 'Сарайшық ауданы, Астана',
         buildRoute: 'Маршрут салу',
+        
+        // Contacts
+        contactsTitle: 'Байланыс',
         
         // Modal
         modalTitle: 'Қабылдауға жазылу',

@@ -207,8 +207,8 @@ const translations = {
         
         // Location
         locationTitle: 'Бізді қалай табуға болады',
-        locationAddress: 'Қасым Аманжолов көшесі, 24',
-        locationDistrict: 'Сарайшық ауданы, Астана',
+        locationAddress: 'Әл-Фараби даңғылы, 30/3',
+        locationDistrict: 'Есіл ауданы, Астана',
         buildRoute: 'Маршрут салу',
         
         // Contacts

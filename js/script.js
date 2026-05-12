@@ -106,8 +106,8 @@ const translations = {
         
         // Location
         locationTitle: 'Как нас найти',
-        locationAddress: 'ул. Касыма Аманжолова, 24',
-        locationDistrict: 'Сарайшық район, Астана',
+        locationAddress: 'Аль-Фараби проспект, 30/3',
+        locationDistrict: 'Есиль район, Астана',
         buildRoute: 'Построить маршрут',
         
         // Contacts

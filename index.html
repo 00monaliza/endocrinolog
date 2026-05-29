@@ -40,6 +40,7 @@
                 <button class="lang-btn active" data-lang="ru">RU</button>
                 <button class="lang-btn" data-lang="kk">KK</button>
             </div>
+            <a href="#about" class="nav-link" data-ru="Обо мне" data-kk="Мен туралы">Обо мне</a>
             <a href="#services" class="nav-link" data-ru="Услуги" data-kk="Қызметтер">Услуги</a>
             <a href="#contact" class="nav-link" data-ru="Цены" data-kk="Бағалар">Цены</a>
             <a href="#uzi" class="nav-link" data-ru="УЗИ" data-kk="УДЗ">УЗИ</a>
@@ -50,96 +51,65 @@
             </a>
         </nav>
     </header>
-        <!-- UZI Section -->
-        <section id="uzi" class="reveal" style="background-color: var(--secondary);">
-            <div class="container">
 
-                <!-- Block 1: Description -->
-                <h2 style="text-align: center; margin-bottom: 15px; color: var(--primary);" data-translate="uziTitle">Ультразвуковая диагностика</h2>
-                <p class="uzi-intro" data-translate="uziIntro">Клиника Zor Qadam · Астана — современное УЗИ-оборудование, опытный врач, полный спектр исследований.</p>
-
-                <div class="uzi-areas-grid">
-                    <div class="uzi-area-card">
-                        <div class="uzi-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <ellipse cx="12" cy="14" rx="7" ry="8"/>
-                                <path d="M9 10 Q12 8 15 10"/>
-                                <path d="M9 14 Q12 17 15 14"/>
-                                <circle cx="12" cy="4" r="2" fill="currentColor" stroke="none"/>
-                            </svg>
-                        </div>
-                        <h3 data-translate="uziArea1Title">Брюшная полость</h3>
-                        <p data-translate="uziArea1Desc">печень, желчный пузырь, поджелудочная, селезёнка, почки</p>
-                    </div>
-
-                    <div class="uzi-area-card">
-                        <div class="uzi-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M6 8c1-2 3-3 6-3s5 1 6 3c1 2 1 6 0 8-1 2-3 3-6 3s-5-1-6-3c-1-2-1-6 0-8z"/>
-                                <path d="M10 7v10"/>
-                                <path d="M14 7v10"/>
-                            </svg>
-                        </div>
-                        <h3 data-translate="uziArea2Title">Щитовидная железа</h3>
-                        <p data-translate="uziArea2Desc">структура, объём, узлы, кровоток</p>
-                    </div>
-
-                    <div class="uzi-area-card">
-                        <div class="uzi-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 19h16"/>
-                                <path d="M8 19V9l4-4 4 4v10"/>
-                                <path d="M10 19v-6h4v6"/>
-                            </svg>
-                        </div>
-                        <h3 data-translate="uziArea3Title">Гинекология / Молочные железы</h3>
-                        <p data-translate="uziArea3Desc">органы малого таза, фолликулометрия, молочные железы</p>
-                    </div>
-
-                    <div class="uzi-area-card">
-                        <div class="uzi-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="8" cy="9" r="3"/>
-                                <path d="M5 19c0-2.2 1.8-4 4-4s4 1.8 4 4"/>
-                                <path d="M16 8h3"/>
-                                <path d="M16 12h4"/>
-                                <path d="M16 16h3"/>
-                            </svg>
-                        </div>
-                        <h3 data-translate="uziArea4Title">Сосуды и мягкие ткани</h3>
-                        <p data-translate="uziArea4Desc">артерии, вены, лимфоузлы, мягкие ткани</p>
-                    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-left">
+                <div class="hero-badge"></div>
+                <h1>Кристина Алексеевна</h1>
+                <p class="hero-subtitle" data-translate="heroSubtitle">Эндокринолог и Диетолог<br>для детей и взрослых.<br>Доказательная медицина<br>и персонализированный подход.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/77055580008" target="_blank" class="btn btn-online"><span data-translate="btnOnline">Онлайн прием</span></a>
+                    <a href="https://wa.me/77077339686" target="_blank" class="btn btn-offline"><span data-translate="btnOffline">Оффлайн прием</span></a>
                 </div>
-
-                <div class="uzi-services-grid">
-                    <div class="pricing-card pricing-card-highlight uzi-pricing-card">
-                        <h3 data-translate="uziCheckup1Title">Женский check-up</h3>
-                        <div class="pricing-section">
-                            <p class="uzi-checkup-desc" data-translate="uziCheckup1Desc">ОБП + почки + мочевой пузырь + щитовидная железа + молочные железы</p>
-                        </div>
-                        <div class="uzi-checkup-price">20 000 ₸</div>
-                    </div>
-
-                    <div class="pricing-card pricing-card-highlight uzi-pricing-card">
-                        <h3 data-translate="uziCheckup2Title">Мужской check-up</h3>
-                        <div class="pricing-section">
-                            <p class="uzi-checkup-desc" data-translate="uziCheckup2Desc">ОБП + почки + мочевой пузырь + простата (ТА)</p>
-                        </div>
-                        <div class="uzi-checkup-price">18 000 ₸</div>
-                    </div>
-
-                    <div class="pricing-card pricing-card-highlight uzi-pricing-card">
-                        <h3 data-translate="uziCheckup3Title">Эндокринологический комплекс</h3>
-                        <div class="pricing-section">
-                            <p class="uzi-checkup-desc" data-translate="uziCheckup3Desc">Щитовидная железа + надпочечники + поджелудочная железа</p>
-                        </div>
-                        <div class="uzi-checkup-price">14 000 ₸</div>
-                    </div>
-                </div>
-
             </div>
-        </section>
+            <div class="hero-right">
+                <div class="hero-image-wrapper">
+                    <div class="hero-circle-bg"></div>
+                    <div class="hero-circle-decoration"></div>
+                    <img src="images/three-remove.png" alt="Доктор Кристина Алексеевна" class="hero-doctor-image">
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="about" class="reveal">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 data-translate="aboutTitle">Обо мне</h2>
+                    <p data-translate="aboutP1">Я помогаю людям разобраться в гормонах, настроить питание, понять свой организм и почувствовать себя лучше. В своей практике придерживаюсь международных рекомендаций.</p>
+                    <p data-translate="aboutP2">В своём блоге я создаю пространство, где каждый человек может получить понятные ответы о гормонах, питании и метаболическом здоровье.</p>
+                    <div class="quote-box" data-translate="aboutQuote">
+                        "Моя цель — помочь людям перейти от мифов и устаревших подходов к современным, безопасным и доказательным решениям."
+                    </div>
+                    <p data-translate="aboutP3">Я стремлюсь, чтобы мои пациенты чувствовали уверенность, понимали свой диагноз и не жили в страхе перед гормонами, анализами или весом. Через просвещение и поддержку я влияю на качество жизни людей.</p>
+                </div>
+                <div class="doctor-photo">
+                    <img src="images/main.JPG" alt="Врач-эндокринолог Кристина Алексеевна">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal-scale">
+        <div class="container">
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="450">0</div>
+                    <p data-translate="stat1Text">Пациентов прошли консультации</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="80">0</div>
+                    <p data-translate="stat2Text">Пациентов в длительном сопровождении</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">GLP-1</div>
+                    <p data-translate="stat3Text">Эксперт по терапии (Оземпик, Манджаро)</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section style="background-color: var(--white);" class="reveal">
@@ -352,7 +322,7 @@
             </div>
 
             <div style="text-align: center; margin-top: 50px;">
-                <a href="#" class="btn btn-primary" id="bookingBtn"><span data-translate="bookNow">Записаться сейчас</span></a>
+                <a href="#" class="btn btn-primary" id="bookingBtnBottom"><span data-translate="bookNow">Записаться сейчас</span></a>
             </div>
         </div>
     </section>

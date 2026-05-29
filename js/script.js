@@ -1,11 +1,12 @@
 // ==================== THEME TOGGLE ====================
 const themeToggle = document.getElementById('themeToggle');
-const htmlElement = document.documentElement;
-
-// Load saved theme or default to light
 const savedTheme = localStorage.getItem('theme') || 'light';
 htmlElement.setAttribute('data-theme', savedTheme);
-updateThemeIcon(savedTheme);
+
+if (themeToggle) {
+    updateThemeIcon(savedTheme);
+    themeToggle.addEventListener('click', toggleTheme);
+}
 
 function toggleTheme() {
     const currentTheme = htmlElement.getAttribute('data-theme');

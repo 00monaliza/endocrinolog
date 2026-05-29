@@ -22,6 +22,34 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <a href="#" class="logo">
+            <img src="images/logo.png" alt="Logo" class="logo-circle-img">
+        </a>
+        <nav>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="kk">KK</button>
+            </div>
+            <a href="#services" class="nav-link" data-ru="Услуги" data-kk="Қызметтер">Услуги</a>
+            <a href="#contact" class="nav-link" data-ru="Цены" data-kk="Бағалар">Цены</a>
+            <a href="#uzi" class="nav-link" data-ru="УЗИ" data-kk="УДЗ">УЗИ</a>
+            <a href="#location" class="nav-link" data-ru="Адрес" data-kk="Мекенжай">Адрес</a>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+            <a href="#" class="book-appointment-btn" id="bookingBtn">
+                <span data-translate="bookAppointment">Записаться</span>
+            </a>
+        </nav>
+    </header>
         <!-- UZI Section -->
         <section id="uzi" class="reveal" style="background-color: var(--secondary);">
             <div class="container">

@@ -1210,8 +1210,11 @@ footer p {
 
 @media (max-width: 768px) {
     header {
-        padding: 12px 20px !important;
-        width: calc(100% - 30px);
+        padding: 12px 14px !important;
+        width: calc(100% - 24px);
+        max-width: calc(100% - 24px);
+        justify-content: center;
+        overflow: hidden;
     }
     
     .logo {
@@ -1224,7 +1227,11 @@ footer p {
     }
     
     nav {
-        gap: 10px;
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        min-width: 0;
     }
     
     .nav-link {
@@ -1244,8 +1251,9 @@ footer p {
     }
     
     .book-appointment-btn {
-        padding: 8px 16px;
-        font-size: 0.8rem;
+        padding: 8px 14px;
+        font-size: 0.78rem;
+        max-width: 100%;
     }
     
     .hero {
@@ -1402,6 +1410,8 @@ footer p {
     
     .hero-subtitle { 
         font-size: 0.9rem;
+        padding: 0;
+        overflow-wrap: break-word;
     }
     
     .hero-badge {
@@ -1429,16 +1439,23 @@ footer p {
     }
     
     header {
-        padding: 10px 15px;
+        padding: 10px 10px !important;
+        width: calc(100% - 20px);
+        max-width: calc(100% - 20px);
     }
     
     nav {
-        gap: 5px;
+        gap: 7px;
     }
     
     .nav-link {
         font-size: 0.75rem;
         padding: 6px 8px;
+    }
+
+    .book-appointment-btn {
+        padding: 8px 12px;
+        font-size: 0.75rem;
     }
     
     .theme-toggle {
@@ -1923,21 +1940,31 @@ footer p {
     .about-grid { grid-template-columns: 1fr; gap: 30px; }
     
     header {
-        padding: 15px 20px;
+        padding: 12px 14px !important;
+        width: calc(100% - 24px);
+        max-width: calc(100% - 24px);
         flex-wrap: wrap;
         gap: 10px;
+        justify-content: center;
+        overflow: hidden;
     }
     
     nav {
         width: 100%;
         justify-content: center;
-        gap: 10px;
+        gap: 8px;
         flex-wrap: wrap;
+        min-width: 0;
     }
     
     .nav-link {
-        font-size: 0.85rem;
-        padding: 8px 12px;
+        font-size: 0.8rem;
+        padding: 8px 10px;
+    }
+
+    .nav-link[href="#uzi"],
+    .nav-link[href="#location"] {
+        display: none;
     }
     
     .language-switcher {
@@ -2075,11 +2102,23 @@ footer p {
         flex-direction: column;
         gap: 15px;
         width: 100%;
-        padding: 0 20px;
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
     }
     
     .hero-buttons .btn {
         width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-container,
+    .hero-left,
+    .hero-right {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
     }
     
     .language-switcher {
@@ -2093,6 +2132,60 @@ footer p {
     
     .location-content {
         gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px !important;
+        width: calc(100% - 20px);
+        max-width: calc(100% - 20px);
+    }
+
+    nav {
+        gap: 7px;
+    }
+
+    .nav-link[href="#uzi"],
+    .nav-link[href="#location"] {
+        display: none;
+    }
+
+    .nav-link {
+        font-size: 0.75rem;
+        padding: 6px 8px;
+    }
+
+    .book-appointment-btn {
+        padding: 8px 12px;
+        font-size: 0.75rem;
+    }
+
+    .hero {
+        padding-left: 15px;
+        padding-right: 15px;
+        overflow: hidden;
+    }
+
+    .hero-container,
+    .hero-left,
+    .hero-right {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .hero-subtitle {
+        padding: 0;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-wrap: break-word;
+    }
+
+    .hero-buttons {
+        padding: 0;
+        max-width: 280px;
     }
 }
 

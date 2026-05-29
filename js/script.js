@@ -1,4 +1,5 @@
 // ==================== THEME TOGGLE ====================
+const htmlElement = document.documentElement;
 const themeToggle = document.getElementById('themeToggle');
 const savedTheme = localStorage.getItem('theme') || 'light';
 htmlElement.setAttribute('data-theme', savedTheme);
@@ -17,9 +18,8 @@ function toggleTheme() {
     updateThemeIcon(newTheme);
 }
 
-themeToggle.addEventListener('click', toggleTheme);
-
 function updateThemeIcon(theme) {
+    if (!themeToggle) return;
     const icon = theme === 'light' ? '🌙' : '☀️';
     themeToggle.textContent = icon;
 }
@@ -33,7 +33,7 @@ const translations = {
         contactNav: 'Контакты',
         
         // Hero
-        heroSubtitle: 'Эндокринолог и Диетолог для детей и взрослых.<br>Доказательная медицина и персонализированный подход.',
+        heroSubtitle: 'Эндокринолог и Диетолог<br>для детей и взрослых.<br>Доказательная медицина<br>и персонализированный подход.',
         btnOnline: 'Онлайн прием',
         btnOffline: 'Оффлайн прием',
         bookAppointment: 'Записаться на прием',
@@ -171,7 +171,7 @@ const translations = {
         contactNav: 'Байланыс',
         
         // Hero
-        heroSubtitle: 'Балалар мен ересектерге арналған Эндокринолог және Диетолог.<br>Дәлелді медицина және жекелендірілген тәсіл.',
+        heroSubtitle: 'Балалар мен ересектерге арналған<br>Эндокринолог және Диетолог.<br>Дәлелді медицина<br>және жекелендірілген тәсіл.',
         btnOnline: 'Онлайн қабылдау',
         btnOffline: 'Офлайн қабылдау',
         bookAppointment: 'Қабылдауға жазылу',
@@ -362,13 +362,18 @@ switchLanguage(currentLang);
 // ==================== LOADER ====================
 window.addEventListener('load', () => {
     setTimeout(() => {
-        document.querySelector('.loader').classList.add('hidden');
+        const loader = document.querySelector('.loader');
+        if (loader) {
+            loader.classList.add('hidden');
+        }
     }, 1000);
 });
 
 // ==================== PARTICLES ====================
 function createParticles() {
     const particles = document.getElementById('particles');
+    if (!particles) return;
+
     const particleCount = 30;
     
     for (let i = 0; i < particleCount; i++) {
@@ -389,6 +394,8 @@ let lastScrollTop = 0;
 let scrollTimeout;
 
 window.addEventListener('scroll', () => {
+    if (!header) return;
+
     const currentScroll = window.scrollY;
     
     // Add/remove scrolled class for styling
@@ -489,6 +496,8 @@ window.addEventListener('scroll', () => {
 const scrollTop = document.getElementById('scrollTop');
 
 window.addEventListener('scroll', () => {
+    if (!scrollTop) return;
+
     if (window.scrollY > 500) {
         scrollTop.classList.add('visible');
     } else {
@@ -496,29 +505,32 @@ window.addEventListener('scroll', () => {
     }
 });
 
-scrollTop.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+if (scrollTop) {
+    scrollTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
-});
+}
 
 // ==================== APPOINTMENT TYPE SELECTION MODAL ====================
 const appointmentModal = document.getElementById('appointmentModal');
 const appointmentModalClose = document.getElementById('appointmentModalClose');
-const bookingBtn = document.getElementById('bookingBtn');
+const bookingButtons = document.querySelectorAll('#bookingBtn, #bookingBtnBottom, .book-appointment-btn');
 
 // Open modal when clicking "Записаться сейчас"
-if (bookingBtn) {
-    bookingBtn.addEventListener('click', (e) => {
+if (bookingButtons.length > 0 && appointmentModal) {
+    bookingButtons.forEach(bookingBtn => bookingBtn.addEventListener('click', (e) => {
         e.preventDefault();
         appointmentModal.classList.add('active');
         document.body.style.overflow = 'hidden';
-    });
+    }));
 }
 
 // Close modal
 function closeAppointmentModal() {
+    if (!appointmentModal) return;
     appointmentModal.classList.remove('active');
     document.body.style.overflow = 'auto';
 }

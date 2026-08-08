@@ -362,14 +362,22 @@ function updatePageContent(lang) {
 switchLanguage(currentLang);
 
 // ==================== LOADER ====================
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        const loader = document.querySelector('.loader');
-        if (loader) {
-            loader.classList.add('hidden');
-        }
-    }, 1000);
-});
+// Прячем лоадер сразу после готовности разметки, не дожидаясь загрузки всех
+// картинок (они грузятся лениво). Страховочный таймер — на случай ошибок.
+function hideLoader() {
+    const loader = document.querySelector('.loader');
+    if (loader) {
+        loader.classList.add('hidden');
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', hideLoader);
+} else {
+    hideLoader();
+}
+window.addEventListener('load', hideLoader);
+setTimeout(hideLoader, 3000);
 
 // ==================== PARTICLES ====================
 function createParticles() {
